@@ -1,0 +1,29 @@
+﻿@model IEnumerable<SporsmalOgSvar>
+
+@{
+    ViewBag.Title = "FAQ side";
+}
+
+<table>
+    <tread>
+        <tr>
+            <th>ID</th>
+            <th>Spørsmål</th>
+            <th>Svar</th>
+        </tr>
+    </tread>
+    <tbody>
+        @foreach (var sporsmalOgSvar in Model)
+        {
+            <tr>
+                <td>@sporsmalOgSvar.Id</td>
+                <td>@sporsmalOgSvar.Sporsmal</td>
+                <td>@sporsmalOgSvar.Svar</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <sricpt src="/js/site.js"></sricpt>
+}
