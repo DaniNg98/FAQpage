@@ -4,22 +4,24 @@
     ViewBag.Title = "Spørsmål og svar";
 }
 
-
-
-<div style="text-align:center">
-<h1>Hva lurer du på?</h1>
+<div style="text-align:center; margin-bottom:50px; margin-top:50px">
+    <h1>Finnreise FAQ</h1>
 </div>
 
-<div style="text-align:center">
-<h5>Velkommen til vår FAQ side. Her finner du spørsmål og svar relatert til vår nettside.</h5>
+<div style="text-align:center; margin-bottom:50px; margin-top:20px">
+<h5>Velkommen til Finnreise's FAQ side. Her finner du spørsmål og svar relatert til vår nettside.</h5>
 <h5>Dersom du ikke finner ditt spørsmål kan du sende inn et spørsmål til oss.</h5>
+</div>
+
+<div>
+    <h3>Alle spørsmål</h3>
 </div>
 
 @foreach (var sporsmalOgSvar in Model)
 {
 <div id="accordion">
     <div class="card">
-    <div class="card-header" id="headingTwo" style="text-align:center">
+    <div class="card-header" id="headingTwo">
         <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#h@(sporsmalOgSvar.Id)" aria-expanded="false" aria-controls="h@(sporsmalOgSvar.Id)" data-parent="#accordion">
             @sporsmalOgSvar.Sporsmal
@@ -37,14 +39,13 @@
     </div>
     </div>
 </div>
-
 }
 
-<div style="text-align:center">
+<div style="text-align:center; margin-top:100px; margin-left:20%; margin-right:20%">
 <h5>Fant du ikke spørsmålet ditt? Send inn ditt spørsmål til oss så svarer på ditt spørsmål så fort som mulig.</h5>
 </div>
 
-<form>
+<form style="margin-bottom:120px; margin-left:20%; margin-right:20%">
   <div class="form-group">
     <label for="exampleFormControlInput1">Din E-mail adresse</label>
     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="dinMail@eksempel.com">
@@ -66,11 +67,7 @@
     </div>
 </form>
 
-<div>
 
-
-
-</div>
 
 @section Scripts {
     <sricpt src="/js/site.js"></sricpt>

@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{E397C9C4-04E8-4B37-9790-775D6CC3138F}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="FAQpage/Views/Home/AlleSporsmal.cshtml">
     <Files>
-      <File FileName="FAQpage/Views/Shared/_Layout.cshtml" Line="38" Column="15" />
-      <File FileName="FAQpage/Views/Home/AlleSporsmal.cshtml" Line="38" Column="11" />
+      <File FileName="FAQpage/Views/Shared/_Layout.cshtml" Line="51" Column="8" />
       <File FileName="FAQpage/Controllers/HomeController.cs" Line="1" Column="1" />
       <File FileName="FAQpage/Models/SporsmalOgSvar.cs" Line="1" Column="1" />
+      <File FileName="FAQpage/Views/Home/AlleSporsmal.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,25 +17,13 @@
               <Node name="Models" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True">
-                  <Node name="AlleSporsmal.cshtml" selected="True" />
-                </Node>
+                <Node name="Home" expanded="True" />
                 <Node name="Shared" expanded="True" />
+                <Node name="_ViewStart.cshtml" selected="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True" />
                 <Node name="js" expanded="True" />
-                <Node name="lib" expanded="True">
-                  <Node name="bootstrap" expanded="True">
-                    <Node name="dist" expanded="True">
-                      <Node name="js" expanded="True">
-                        <Node name="bootstrap.js" expanded="True">
-                          <Node name="bootstrap.bundle.js" expanded="True" />
-                        </Node>
-                      </Node>
-                    </Node>
-                  </Node>
-                </Node>
               </Node>
               <Node name="appsettings.json" expanded="True" />
             </Node>
