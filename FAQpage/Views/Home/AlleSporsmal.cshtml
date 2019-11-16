@@ -1,0 +1,77 @@
+﻿@model IEnumerable<SporsmalOgSvar>
+
+@{
+    ViewBag.Title = "Spørsmål og svar";
+}
+
+
+
+<div style="text-align:center">
+<h1>Hva lurer du på?</h1>
+</div>
+
+<div style="text-align:center">
+<h5>Velkommen til vår FAQ side. Her finner du spørsmål og svar relatert til vår nettside.</h5>
+<h5>Dersom du ikke finner ditt spørsmål kan du sende inn et spørsmål til oss.</h5>
+</div>
+
+@foreach (var sporsmalOgSvar in Model)
+{
+<div id="accordion">
+    <div class="card">
+    <div class="card-header" id="headingTwo" style="text-align:center">
+        <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#h@(sporsmalOgSvar.Id)" aria-expanded="false" aria-controls="h@(sporsmalOgSvar.Id)" data-parent="#accordion">
+            @sporsmalOgSvar.Sporsmal
+        </button>
+        </h5>
+    </div>
+    <div id="h@(sporsmalOgSvar.Id)" class="collapse" aria-labelledby="headingTwo">
+        <div class="card-body">
+            @sporsmalOgSvar.Svar
+            <div style="float:right">
+                <button type="button" class="btn btn-sm btn-success"><i class="fa fa-thumbs-up" ng-click="incrementLikes(technology)"></i></button>  
+                <button type="button" class="btn btn-sm btn-danger"><i class="fa fa-thumbs-down" ng-click="incrementDislikes(technology)"></i></button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+}
+
+<div style="text-align:center">
+<h5>Fant du ikke spørsmålet ditt? Send inn ditt spørsmål til oss så svarer på ditt spørsmål så fort som mulig.</h5>
+</div>
+
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Din E-mail adresse</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="dinMail@eksempel.com">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Tema</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>Billett</option>
+      <option>Admin</option>
+      <option>Annet</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Angi ditt spørsmål her</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+    <div style="float:right">
+         <button type="submit" class="btn btn-primary">Send inn</button>
+    </div>
+</form>
+
+<div>
+
+
+
+</div>
+
+@section Scripts {
+    <sricpt src="/js/site.js"></sricpt>
+}

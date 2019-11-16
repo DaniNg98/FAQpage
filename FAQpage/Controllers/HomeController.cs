@@ -29,7 +29,7 @@ namespace FAQpage.Controllers
             return View(model);
         }
 
-        public ViewResult Details()
+        public ViewResult AlleSporsmal()
         {
             var model = _sporsmalOgSvarRepository.GetAlleSporsmal();
             return View(model);
