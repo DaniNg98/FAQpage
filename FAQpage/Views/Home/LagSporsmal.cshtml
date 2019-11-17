@@ -3,27 +3,29 @@
     ViewBag.Title = "Send inn et spørsmål";
 }
 
-<form asp-controller="Home" asp-action="LagSporsmal" style="margin-top:100px; margin-left:20%; margin-right:20%">
+<form asp-controller="Home" asp-action="LagSporsmal" post="post" style="margin-top:100px; margin-left:20%; margin-right:20%">
   <div class="form-group">
-    <label for="exampleFormControlInput1">Navn</label>
-    <input asp-for="Navn" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Navn">
+    <label asp-for="Navn">Navn</label>
+    <input asp-for="Navn" class="form-control" placeholder="Navn">
       <span asp-validation-for="Navn" class="text-danger"></span>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlInput1">Epost</label>
-    <input asp-for="Email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="ola.nordmann@eksempel.com">
+    <label asp-for="Email">Epost</label>
+    <input asp-for="Email" class="form-control" placeholder="ola.nordmann@eksempel.com">
+      <span asp-validation-for="Email" class="text-danger"></span>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Tema</label>
-    <select asp-for="Tema" class="form-control" id="exampleFormControlSelect1">
+    <label asp-for="Tema">Tema</label>
+    <select asp-for="Tema" class="form-control">
       <option>Billett</option>
       <option>Admin</option>
       <option>Annet</option>
     </select>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlTextarea1">Angi ditt spørsmål her</label>
-    <textarea asp-for="Sporsmal" type="text" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label asp-for="Sporsmal">Angi ditt spørsmål her</label>
+    <textarea asp-for="Sporsmal" class="form-control" rows="3"></textarea>
+      <span asp-validation-for="Sporsmal" class="text-danger"></span>
   </div>
     <div style="float:right">
          <a asp-controller="Home" asp-action="AlleSporsmal" class="btn btn-primary">Tilbake</a>

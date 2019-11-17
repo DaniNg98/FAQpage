@@ -43,16 +43,16 @@ namespace FAQpage.Controllers
 
         
         [HttpPost]
-        public IActionResult LagSpormal(SendtInnSpm sporsmal)
+        public IActionResult LagSporsmal(SendtInnSpm sendtInnSpm)
         {
             if (ModelState.IsValid)
             {
                 SendtInnSpm nySporsmal = new SendtInnSpm
                 {
-                    Navn = sporsmal.Navn,
-                    Email = sporsmal.Email,
-                    Tema = sporsmal.Tema,
-                    Sporsmal = sporsmal.Sporsmal
+                    Navn = sendtInnSpm.Navn,
+                    Email = sendtInnSpm.Email,
+                    Tema = sendtInnSpm.Tema,
+                    Sporsmal = sendtInnSpm.Sporsmal
                 };
 
                 _sporsmalOgSvarRepository.LeggTilSporsmal(nySporsmal);
@@ -63,7 +63,8 @@ namespace FAQpage.Controllers
 
         public ViewResult InnsendtSpm()
         {
-            return View();
+            var model = _sporsmalOgSvarRepository.GetAlleNySporsmal();
+            return View(model);
         }
         
 

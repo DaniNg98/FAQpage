@@ -4,6 +4,16 @@
     ViewBag.Title = "Innsendt spørsmål";
 }
 
+<div style="margin-top:30px; margin-bottom:50px">
+    <h2>Takk for at du sendte inn et spørsmål</h2>
+    <h2>Vi vil svare på ditt spørsmål så fort som mulig!</h2>
+</div>
+
+<div>
+    <h5>Tabelliste over alle innsendte spørsmål</h5>
+</div>
+
+
 <table>
     <tread>
         <tr>
@@ -15,14 +25,14 @@
         </tr>
     </tread>
     <tbody>
-        @foreach (var sporsmal in Model)
+        @foreach (var sendtInnSpm in Model)
         {
             <tr>
-                <td>@sporsmal.SId</td>
-                <td>@sporsmal.Navn</td>
-                <td>@sporsmal.Email</td>
-                <td>@sporsmal.Tema</td>
-                <td>@sporsmal.Sporsmal</td>
+                <td>@sendtInnSpm.SId</td>
+                <td>@sendtInnSpm.Navn</td>
+                <td>@sendtInnSpm.Email</td>
+                <td>@sendtInnSpm.Tema</td>
+                <td>@sendtInnSpm.Sporsmal</td>
             </tr>
         }
     </tbody>

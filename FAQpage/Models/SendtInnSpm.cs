@@ -11,7 +11,7 @@ namespace FAQpage.Models
         [MinLength(2, ErrorMessage = "Navnet må ha minst 2 bokstaver")]
         public string Navn { get; set; }
         [Required]
-        [RegularExpression(@"^[a-zA-Z0-9+_.-]+@[a.zA-Z0-9.-]+\.[a-zA-Z0-9.-]+$", ErrorMessage = "Ugyldig email")]
+        [RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", ErrorMessage = "Ugyldig email")]
         public string Email { get; set; }
         public string Tema { get; set; }
         [Required]

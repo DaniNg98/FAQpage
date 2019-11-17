@@ -24,12 +24,12 @@ namespace FAQpage.Models
             return context.SporsmalerOgSvar.Find(id);
         }
 
-        public SporsmalOgSvar OpdaterNegativ(int id)
+        public SporsmalOgSvar OpdaterPositiv(SporsmalOgSvar sporsmalOgSvar)
         {
             throw new NotImplementedException();
         }
 
-        public SporsmalOgSvar OpdaterPositiv(int id)
+        public SporsmalOgSvar OpdaterNegativ(SporsmalOgSvar sporsmalOgSvar)
         {
             throw new NotImplementedException();
         }
