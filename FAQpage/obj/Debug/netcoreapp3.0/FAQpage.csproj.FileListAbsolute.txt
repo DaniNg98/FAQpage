@@ -51,3 +51,5 @@
 /Users/daninani/Projects/FAQpage/FAQpage/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.Design.dll
 /Users/daninani/Projects/FAQpage/FAQpage/bin/Debug/netcoreapp3.0/Westwind.AspnetCore.LiveReload.dll
 /Users/daninani/Projects/FAQpage/FAQpage/obj/Debug/netcoreapp3.0/Razor/Views/Home/AlleSporsmal.cshtml.g.cs
+/Users/daninani/Projects/FAQpage/FAQpage/obj/Debug/netcoreapp3.0/Razor/Views/Home/LagSporsmal.cshtml.g.cs
+/Users/daninani/Projects/FAQpage/FAQpage/obj/Debug/netcoreapp3.0/Razor/Views/Home/InnsendtSpm.cshtml.g.cs

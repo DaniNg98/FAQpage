@@ -35,6 +35,38 @@ namespace FAQpage.Controllers
             return View(model);
         }
 
+        [HttpGet]
+        public ViewResult LagSporsmal()
+        {
+            return View();
+        }
+
+        
+        [HttpPost]
+        public IActionResult LagSpormal(SendtInnSpm sporsmal)
+        {
+            if (ModelState.IsValid)
+            {
+                SendtInnSpm nySporsmal = new SendtInnSpm
+                {
+                    Navn = sporsmal.Navn,
+                    Email = sporsmal.Email,
+                    Tema = sporsmal.Tema,
+                    Sporsmal = sporsmal.Sporsmal
+                };
+
+                _sporsmalOgSvarRepository.LeggTilSporsmal(nySporsmal);
+                return RedirectToAction("InnsendtSpm", new { id = nySporsmal.SId });
+            }
+            return View();
+        }
+
+        public ViewResult InnsendtSpm()
+        {
+            return View();
+        }
+        
+
         /*
         public ViewResult Details(int? id)
         {

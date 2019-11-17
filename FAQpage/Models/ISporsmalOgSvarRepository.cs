@@ -6,5 +6,11 @@ namespace FAQpage.Models
     {
         SporsmalOgSvar GetSporsmalOgSvar(int id);
         IEnumerable<SporsmalOgSvar> GetAlleSporsmal();
+        SporsmalOgSvar OpdaterPositiv(int id);
+        SporsmalOgSvar OpdaterNegativ(int id);
+
+        SendtInnSpm LeggTilSporsmal(SendtInnSpm sporsmal);
+        SendtInnSpm SlettSporsmal(int id);
+        IEnumerable<SendtInnSpm> GetAlleNySporsmal();
     }
 }

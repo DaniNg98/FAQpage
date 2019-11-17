@@ -1,0 +1,32 @@
+﻿@model SendtInnSpm
+@{
+    ViewBag.Title = "Send inn et spørsmål";
+}
+
+<form asp-controller="Home" asp-action="LagSporsmal" style="margin-top:100px; margin-left:20%; margin-right:20%">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Navn</label>
+    <input asp-for="Navn" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Navn">
+      <span asp-validation-for="Navn" class="text-danger"></span>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Epost</label>
+    <input asp-for="Email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="ola.nordmann@eksempel.com">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Tema</label>
+    <select asp-for="Tema" class="form-control" id="exampleFormControlSelect1">
+      <option>Billett</option>
+      <option>Admin</option>
+      <option>Annet</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Angi ditt spørsmål her</label>
+    <textarea asp-for="Sporsmal" type="text" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+    <div style="float:right">
+         <a asp-controller="Home" asp-action="AlleSporsmal" class="btn btn-primary">Tilbake</a>
+         <button type="submit" class="btn btn-primary">Send inn</button>
+    </div>
+</form>

@@ -14,6 +14,7 @@ namespace FAQpage.Data
 
         
         public DbSet<SporsmalOgSvar> SporsmalerOgSvar { get; set; }
+        public DbSet<SendtInnSpm> SendtInnSpms { get; set; }
         
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -21,6 +22,6 @@ namespace FAQpage.Data
             modelBuilder.Seed();
         }
 
-     
+        
     }
 }

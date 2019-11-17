@@ -1,0 +1,29 @@
+﻿@model IEnumerable<SendtInnSpm>
+
+@{
+    ViewBag.Title = "Innsendt spørsmål";
+}
+
+<table>
+    <tread>
+        <tr>
+            <th>SId</th>
+            <th>Navn</th>
+            <th>Email</th>
+            <th>Tema</th>
+            <th>Spørsmål</th>
+        </tr>
+    </tread>
+    <tbody>
+        @foreach (var sporsmal in Model)
+        {
+            <tr>
+                <td>@sporsmal.SId</td>
+                <td>@sporsmal.Navn</td>
+                <td>@sporsmal.Email</td>
+                <td>@sporsmal.Tema</td>
+                <td>@sporsmal.Sporsmal</td>
+            </tr>
+        }
+    </tbody>
+</table>
