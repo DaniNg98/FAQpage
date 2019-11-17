@@ -14,16 +14,16 @@
 </div>
 
 
-<table>
-    <tread>
-        <tr>
-            <th>SId</th>
-            <th>Navn</th>
-            <th>Email</th>
-            <th>Tema</th>
-            <th>Spørsmål</th>
-        </tr>
-    </tread>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Navn</th>
+      <th scope="col">Epost</th>
+      <th scope="col">Tema</th>
+      <th scope="col">Spørsmål</th>
+    </tr>
+  </thead>
     <tbody>
         @foreach (var sendtInnSpm in Model)
         {

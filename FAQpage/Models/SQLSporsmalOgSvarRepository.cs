@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using FAQpage.Data;
 
 namespace FAQpage.Models
@@ -24,17 +25,24 @@ namespace FAQpage.Models
             return context.SporsmalerOgSvar.Find(id);
         }
 
-        public SporsmalOgSvar OpdaterPositiv(SporsmalOgSvar sporsmalOgSvar)
+        public void EndreRating(int id, string rating)
         {
-            throw new NotImplementedException();
-        }
+            var sporsmal = context.SporsmalerOgSvar.FirstOrDefault(s => s.Id == id);
 
-        public SporsmalOgSvar OpdaterNegativ(SporsmalOgSvar sporsmalOgSvar)
-        {
-            throw new NotImplementedException();
+            if (sporsmal != null)
+            {
+                if (rating == "true")
+                {
+                    sporsmal.PositivRating += 1;
+                    context.SaveChanges();
+                }
+                else if (rating == "false")
+                {
+                    sporsmal.NegativRating -= 1;
+                    context.SaveChanges();
+                }
+            }
         }
-
-        /*--------------------------*/
 
         public IEnumerable<SendtInnSpm> GetAlleNySporsmal()
         {

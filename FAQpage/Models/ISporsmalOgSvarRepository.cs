@@ -6,8 +6,7 @@ namespace FAQpage.Models
     {
         SporsmalOgSvar GetSporsmalOgSvar(int id);
         IEnumerable<SporsmalOgSvar> GetAlleSporsmal();
-        SporsmalOgSvar OpdaterPositiv(SporsmalOgSvar sporsmalOgSvar);
-        SporsmalOgSvar OpdaterNegativ(SporsmalOgSvar sporsmalOgSvar);
+        void EndreRating(int id, string rating);
 
         SendtInnSpm LeggTilSporsmal(SendtInnSpm sporsmal);
         SendtInnSpm SlettSporsmal(int id);

@@ -2,8 +2,11 @@
 @{
     ViewBag.Title = "Send inn et spørsmål";
 }
+<div style="margin-top:60px; margin-left:30%; margin-right:30%">
+    <h5>Send inn ditt spørsmål</h5>
+</div>
 
-<form asp-controller="Home" asp-action="LagSporsmal" post="post" style="margin-top:100px; margin-left:20%; margin-right:20%">
+<form asp-controller="Home" asp-action="LagSporsmal" post="post" style="margin-top:30px; margin-left:30%; margin-right:30%">
   <div class="form-group">
     <label asp-for="Navn">Navn</label>
     <input asp-for="Navn" class="form-control" placeholder="Navn">
@@ -11,7 +14,7 @@
   </div>
   <div class="form-group">
     <label asp-for="Email">Epost</label>
-    <input asp-for="Email" class="form-control" placeholder="ola.nordmann@eksempel.com">
+    <input asp-for="Email" class="form-control" placeholder="navn@eksempel.com">
       <span asp-validation-for="Email" class="text-danger"></span>
   </div>
   <div class="form-group">
@@ -28,7 +31,7 @@
       <span asp-validation-for="Sporsmal" class="text-danger"></span>
   </div>
     <div style="float:right">
-         <a asp-controller="Home" asp-action="AlleSporsmal" class="btn btn-primary">Tilbake</a>
-         <button type="submit" class="btn btn-primary">Send inn</button>
+         <a asp-controller="Home" asp-action="AlleSporsmal" class="btn btn-outline-secondary">Tilbake</a>
+         <button type="submit" class="btn btn-outline-success">Send inn</button>
     </div>
 </form>

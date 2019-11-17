@@ -8,19 +8,14 @@
               <Node name="Dependencies" expanded="True" />
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Home" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
+                  <Node name="LagSporsmal.cshtml" selected="True" />
                 </Node>
-                <Node name="Shared" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True" />
-                <Node name="js" expanded="True" />
               </Node>
-              <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>

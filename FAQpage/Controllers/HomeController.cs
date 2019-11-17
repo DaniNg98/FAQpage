@@ -9,7 +9,6 @@ using Microsoft.EntityFrameworkCore;
 using FAQpage.Data;
 using Microsoft.Data.SqlClient;
 using FAQpage.Models;
-using FAQpage.ViewModels;
 
 namespace FAQpage.Controllers
 {
@@ -23,12 +22,7 @@ namespace FAQpage.Controllers
             _sporsmalOgSvarRepository = sporsmalOgSvarRepository;
         }
 
-        public ViewResult Index()
-        {
-            var model = _sporsmalOgSvarRepository.GetAlleSporsmal();
-            return View(model);
-        }
-
+        // Henter alle spørsmal fra databasen
         public ViewResult AlleSporsmal()
         {
             var model = _sporsmalOgSvarRepository.GetAlleSporsmal();
@@ -41,7 +35,7 @@ namespace FAQpage.Controllers
             return View();
         }
 
-        
+        // Legger inn et nytt spørsmål i databasen og den automatisk en ny ID
         [HttpPost]
         public IActionResult LagSporsmal(SendtInnSpm sendtInnSpm)
         {
@@ -61,24 +55,20 @@ namespace FAQpage.Controllers
             return View();
         }
 
+        // Henter alle innsendte spørsmal fra databasen
         public ViewResult InnsendtSpm()
         {
             var model = _sporsmalOgSvarRepository.GetAlleNySporsmal();
             return View(model);
         }
-        
 
-        /*
-        public ViewResult Details(int? id)
+        // Oppdaterer ratingen til spørsmålene
+        public IActionResult EndreRating(int id, string rating)
         {
-            HomeDetailsViewModel homeDetailsViewModel = new HomeDetailsViewModel()
-            {
-                SporsmalOgSvar = _sporsmalOgSvarRepository.GetSporsmalOgSvar(id??1)
-            };
-          
-            return View(homeDetailsViewModel);
+            _sporsmalOgSvarRepository.EndreRating(id,rating);
+            return RedirectToAction("AlleSporsmal");
         }
-        */
+       
 
     }
 }
